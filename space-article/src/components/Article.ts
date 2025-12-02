@@ -1,11 +1,12 @@
-
+import { useEffect, useState } from 'react'
+import Article  from "../types"
 
 const URL = 'https://api.spaceflightnewsapi.net/v4/articles'
 
 function Article() {
     const [articles, setArticles] = useState<Article[]>([])
 
-    const getArticles= () => {
+    const getArticles = () => {
         fetch(URL)
         .then((res) => {
             if(res.ok){
@@ -24,7 +25,7 @@ function Article() {
             
         })
         }
-    }
+
 
     useEffect(() => {
     getArticle()
@@ -36,6 +37,6 @@ function Article() {
         </>
     )
 
-}
 
+}
 export default Article
