@@ -13,14 +13,14 @@ function Articles() {
       .then((res) => {
         if (res.ok) {
           console.log("Accesso all'API eseguita con successo.");
-          return res.json;
+          return res.json();
         } else {
           throw new Error('Errore recupero dati.');
         }
       })
       .then((data) => {
-        console.log(data);
-        setArticles(data)
+        console.log(data.results);
+        setArticles(data.results)
       })
       .catch((err) => {
         console.log('Errore ', err);
