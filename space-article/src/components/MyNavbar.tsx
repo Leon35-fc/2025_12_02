@@ -1,24 +1,16 @@
-import {Container, Nav, Navbar} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 function MyNavbar() {
   return (
     <>
-      <Navbar expand="md" bg="dark" data-bs-theme="dark">
+      <Navbar bg='dark' data-bs-theme="dark" expand="lg" className="px-3">
         <Container>
           <Navbar.Brand href="#home">Spaceflight News</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link className="nav-link" to="/">
-              Home
-              </Link>
-              {/* <Link className="nav-link" to="/class">
-              Class
-              </Link>
-              <Nav.Link as={Link} to="/fetch">
-                Fetch
-              </Nav.Link> */}
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="#link">Link</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -42,11 +42,9 @@ function Articles() {
         </Row>
         <Row className="justify-content-center">
           <Col xs={12} md={6}>
-            {/* {articles.map((article) => {
+            {articles.map((article) => {
               return <SingleArticle articleFromProps={article} key={article.id} />;
-            })} */}
-
-            {/* return <SingleArticle/> */}
+            })} 
           </Col>
         </Row>
       </Container>
