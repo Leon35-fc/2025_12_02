@@ -67,7 +67,6 @@ button:focus-visible {
   }
 } */
 
-/* nav div.container{
-  padding: 0;
-  margin: 0;
-} */
+a.h-100.card{
+  text-decoration: none;
+}

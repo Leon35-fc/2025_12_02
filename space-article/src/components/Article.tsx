@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import SingleArticle from './SingleArticle.tsx';
 import { type Article } from '../types/index.ts';
 
@@ -33,19 +33,16 @@ function Articles() {
 
   return (
     <>
-      <h3>La fetch funziona</h3>
-      <Container>
+      <Container fluid={true} className='my-5 px-5'>
         <Row className="justify-content-center">
           <Col>
             <h2 className="text-center">ARTICOLI SPAZIALI</h2>
           </Col>
         </Row>
-        <Row className="justify-content-center">
-          <Col xs={12} md={6}>
+        <Row className=" flex-wrap">
             {articles.map((article) => {
               return <SingleArticle articleFromProps={article} key={article.id} />;
             })} 
-          </Col>
         </Row>
       </Container>
     </>
